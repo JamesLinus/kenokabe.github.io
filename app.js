@@ -84,7 +84,7 @@ var httpServer = function(dir)
 
 
 var HTTPserver =
-	httpServer('www')
+	httpServer('./')
 	.listen(8080, function()
 	{
 		console.log('HTTP listening 8080');
