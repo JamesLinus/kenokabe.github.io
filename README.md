@@ -10,25 +10,17 @@ Ken OKABE Tech Projects and Tutorials
 
 ####Getting Ready
 
- - **/scheme.html** is a clone of the **index.html** (Auto Generated @setup).  Exclude **\<html\>** , Add **\<div id="doc"\>\</div\>**
+ `/contents/entries/` is the directory of the site contents.
 
- - **/javascripts/invoke.js** the bootstrapper
+ `/contents/entries/agenda/` is the directory correspinding to `index.html`
 
-####Write Contents and Publish
+ each entry consist of a directry including 2 files
 
- 1. Edit a DOC on Dual Pane MarkDown Editor
-  
- 2. At the end of the file, add
- 
- ```
-<head><style type="text/css"><!-- body {display: none;} --></style><script src="/javascripts/invoke.js"></script></head>
- ```
+ - entry.html   
+ a template as it is
 
- 3. Obtain the HTML file via Editor, and upload to the top level of the Github repo
+ - entry.html
+ markdown file which you edit and automatically converted to html file by this framework
 
----
-[http://kenokabe.github.io/test0] is an original html file.
-[http://kenokabe.github.io/test0]: http://kenokabe.github.io/test0
 
-[http://kenokabe.github.io/test] is a bootstrap html file modified by adding the 1 line code to call `invoke.js`.
-[http://kenokabe.github.io/test]: http://kenokabe.github.io/test
+
