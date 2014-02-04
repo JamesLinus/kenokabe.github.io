@@ -10,6 +10,8 @@ Ken OKABE Tech Projects and Tutorials
 
 ####Getting Ready
 
+##### /contents/entries/
+
  `/contents/entries/` is the directory of the site contents.
 
  `/contents/entries/agenda/` is the directory correspinding to `index.html`
@@ -24,6 +26,7 @@ Ken OKABE Tech Projects and Tutorials
 
  a markdown file which you edit and automatically converted to html file by this framework
 
+##### /contents/scheme/
 
  `/contents/scheme/` is the directory of the site scheme.
 
