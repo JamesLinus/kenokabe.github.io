@@ -6,7 +6,7 @@
         .ready(function()
         {
             $("body")
-                .load("/contents/scheme.html", function()
+                .load("/contents/scheme/scheme.html", function()
                 {
                     console.log('scheme loaded');
 

@@ -14,13 +14,21 @@ Ken OKABE Tech Projects and Tutorials
 
  `/contents/entries/agenda/` is the directory correspinding to `index.html`
 
- each entry consist of a directry including 2 files
+ each entry consist of a directry including 2 files:
 
- - entry.html   
- a template as it is
+ - `entry.html`  
 
- - entry.html
- markdown file which you edit and automatically converted to html file by this framework
+ a template html file as it is
+
+ - `entry.md`
+
+ a markdown file which you edit and automatically converted to html file by this framework
+
+
+ `/contents/scheme/` is the directory of the site scheme.
+
+ `scheme.html` and other files controls the site appearce.  
+
 
 
 
