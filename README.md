@@ -16,7 +16,7 @@ Ken OKABE Tech Projects and Tutorials
 
  `/contents/entries/agenda/` is the directory correspinding to `index.html`
 
- each entry consist of a directry including 2 files:
+ every entry consist of a directry including 2 files:
 
  - `entry.html`  
 
