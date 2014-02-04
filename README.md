@@ -30,7 +30,7 @@ Ken OKABE Tech Projects and Tutorials
 
  `/contents/scheme/` is the directory of the site scheme.
 
- `scheme.html` and other files controls the site appearce.  
+ `scheme.html` and other files controls the site appearance.  
 
 
 
