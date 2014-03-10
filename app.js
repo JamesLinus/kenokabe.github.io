@@ -82,10 +82,10 @@ var httpServer = function(dir)
 	});
 };
 
-
+var port = 18080;
 var HTTPserver =
 	httpServer('./')
-	.listen(8080, function()
+	.listen(port, function()
 	{
-		console.log('HTTP listening 8080');
+		console.log('HTTP listening : ' + port);
 	});

@@ -14,7 +14,7 @@ Ken OKABE Tech Projects and Tutorials
 
  `/contents/entries/` is the directory of the site contents.
 
- `/contents/entries/agenda/` is the directory correspinding to `index.html`
+ `/contents/entries/entry0/` is the directory correspinding to `index.html`
 
  every entry consist of a directry including 2 files:
 
@@ -31,7 +31,3 @@ Ken OKABE Tech Projects and Tutorials
  `/contents/scheme/` is the directory of the site scheme.
 
  `scheme.html` and other files controls the site appearance.  
-
-
-
-
