@@ -1,2 +1,3 @@
+# KenOKABE tech blog
 
-[## ATOM editor smooth-operator theme](/contents/entries/entry1/entry.html)
+[ATOM editor smooth-operator theme](/contents/entries/entry1/entry.html)

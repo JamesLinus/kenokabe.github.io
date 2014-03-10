@@ -1,11 +1,11 @@
-## entry1 title
+## ATOM editor smooth-operator theme
 
-hhh
 
-jjjjj
+![](http://localhost:18080/contents/entries/entry1/img/smooth-operator-navy.png)
 
-jjjjj
+![](http://localhost:18080/contents/entries/entry1/img/smooth-operator.png)
 
-##[entry2 title](/contents/entries/entry2/entry.html)　に進む
 
-##▲[INDEX](/contents/entries/agenda/entry.html)
+
+
+##▲[INDEX](/contents/entries/entry0/entry.html)
