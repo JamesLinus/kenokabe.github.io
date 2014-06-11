@@ -1,6 +1,6 @@
 # SwiftでiOS開発を関数型（宣言型）プログラミングへパラダイムシフトしよう
 ## KenOKABE tech blog
-###←[コンテンツ](/contents/entries/entry0/entry.html)
+###[←コンテンツ](/contents/entries/entry0/entry.html)
 
 
 asdfas
@@ -13,4 +13,4 @@ sdsdsfsdfds
 
 
 
-###←[コンテンツ](/contents/entries/entry0/entry.html)
+###[←コンテンツ](/contents/entries/entry0/entry.html)
