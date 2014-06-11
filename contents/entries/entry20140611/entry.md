@@ -1,5 +1,5 @@
-# SwiftでiOS開発を関数型（宣言型）プログラミングへパラダイムシフトしよう
-## KenOKABE tech blog
+## SwiftでiOS開発を関数型（宣言型）プログラミングへパラダイムシフトしよう
+### KenOKABE tech blog
 ###[←コンテンツ](/contents/entries/entry0/entry.html)
 
 
