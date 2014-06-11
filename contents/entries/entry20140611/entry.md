@@ -4,7 +4,7 @@
 
 
 
-<code>
+```
 println("hello World")
 
 var a = 5
@@ -35,7 +35,7 @@ var result2 = numbers.map(plus1print)
 var result3 = numbers.reduce(0) { $0 + $1 }
 println(result3)
 
-</code>
+```
 
 
 
