@@ -29,6 +29,8 @@ Objective-Cから継承されるパラメータはSwiftのAPIでは、よりク�
 匿名型はコードをクリーンにし、ミスを減らします。またヘッダを不要にし、ネームスペースを提供します。
 メモリは自動管理され、文末にセミコロンは不要です。
 
+Swiftは、その他にも貴方のコードの記述力を高める多くの特徴があります。
+
 - 関数ポインタと統合されたクロージャ
 - タプルおよび複数戻り値
 - Generic
@@ -236,7 +238,7 @@ var result3 =
 println(result3)
 
 ```
- 
+
 　
  #### KenOKABE tech blog
  ####[←ブログコンテンツ](http://kenokabe.github.io//contents/entries/entry0/entry.html)
