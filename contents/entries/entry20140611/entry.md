@@ -1,4 +1,4 @@
-## Swiftで脱アルゴリズム！iOS開発を関数型（宣言型）プログラミングへパラダイムシフトしてみる
+## Swiftで脱アルゴリズム！iOS開発を関数型（宣言型）プログラミングへパラダイムシフトしてみる【脱アルゴリズム宣言①】
 
 #### KenOKABE tech blog
 ####[←ブログコンテンツ](http://kenokabe.github.io/contents/entries/entry0/entry.html)
