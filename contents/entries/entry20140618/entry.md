@@ -1,5 +1,5 @@
 ## 関数リアクティブプログラミング（FRP）で分断された2つの世界を繋ぐ【脱アルゴリズム宣言②】
-　
+
 #### KenOKABE tech blog
 ####[←ブログコンテンツ](http://kenokabe.github.io/contents/entries/entry0/entry.html)
 
@@ -184,8 +184,9 @@ http://en.wikipedia.org/wiki/Functional_reactive_programming
 注目を集めるリアクティブプログラミング　　
 http://www.infoq.com/jp/news/2013/09/reactive-programming-emerging
 
-今注目を集めるFRPとは、物理世界を数学世界にマッピングする、時空を俯瞰したプログラミングパラダイムである、と言っても過言ではないでしょう。
+「１から１０までの数字」という数列データは、 **数直線上** に存在しているデータですが、FRPでは、イベントというのは **時間軸上** に存在しているデータです。
 
+今注目を集めるFRPとは、物理世界を数学世界にマッピングする、時空を俯瞰したプログラミングパラダイムである、と言っても過言ではないでしょう。
 
 ##FRPのJavaScriptでの実装「Bacon.js」
 
