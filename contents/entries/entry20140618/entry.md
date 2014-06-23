@@ -1,9 +1,12 @@
-## 関数リアクティブプログラミング（FRP）で分断された2つの世界を繋ぐ【脱アルゴリズム宣言②】
-
 #### KenOKABE tech blog
 ####[←ブログコンテンツ](http://kenokabe.github.io/contents/entries/entry0/entry.html)
 
+#記事シリーズ
+### [Swiftで脱アルゴリズム！iOS開発を関数型（宣言型）プログラミングへパラダイムシフトしてみる【脱アルゴリズム宣言①】](http://qiita.com/kenokabe/items/41189c45001321c9e283)
+###  [関数リアクティブプログラミング（FRP）で分断された2つの世界を繋ぐ【脱アルゴリズム宣言②】](http://qiita.com/kenokabe/items/a8477694a499ca869cde)
+### [関数型（宣言型）プログラミングで無限をコーディングする「遅延評価」のわかりやすい解説【脱アルゴリズム宣言③】](http://qiita.com/kenokabe/items/821ce4020644372b648c)
 
+# 関数リアクティブプログラミング（FRP）で分断された2つの世界を繋ぐ【脱アルゴリズム宣言②】
 前回の[ブログ記事](http://kenokabe.github.io/contents/entries/entry20140611/entry.html)
 [Swiftで脱アルゴリズム！iOS開発を関数型（宣言型）プログラミングへパラダイムシフトしてみる【脱アルゴリズム宣言①】](http://qiita.com/kenokabe/items/41189c45001321c9e283)
 
@@ -356,6 +359,7 @@ https://github.com/facebook/react
 ###次回は宣言型パラダイムと切り離せない遅延評価について解説します。
 
 
+[関数型（宣言型）プログラミングで無限をコーディングする「遅延評価」のわかりやすい解説【脱アルゴリズム宣言③】](http://qiita.com/kenokabe/items/821ce4020644372b648c)
+
 #### KenOKABE tech blog
 ####[←ブログコンテンツ](http://kenokabe.github.io/contents/entries/entry0/entry.html)
-　
