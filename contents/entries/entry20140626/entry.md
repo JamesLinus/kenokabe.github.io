@@ -2,153 +2,613 @@
 ####[←ブログコンテンツ](http://kenokabe.github.io/contents/entries/entry0/entry.html)
 
 #記事シリーズ
-### [Swiftで脱アルゴリズム！iOS開発を関数型（宣言型）プログラミングへパラダイムシフトしてみる【脱アルゴリズム宣言①】](http://qiita.com/kenokabe/items/41189c45001321c9e283)
-###  [関数リアクティブプログラミング（FRP）で分断された2つの世界を繋ぐ【脱アルゴリズム宣言②】](http://qiita.com/kenokabe/items/a8477694a499ca869cde)
-### [関数型（宣言型）プログラミングで無限をコーディングする「遅延評価」のわかりやすい解説【脱アルゴリズム宣言③】](http://qiita.com/kenokabe/items/821ce4020644372b648c)
+#### [Swiftで脱アルゴリズム！iOS開発を関数型（宣言型）プログラミングへパラダイムシフトしてみる【脱アルゴリズム宣言①】](http://qiita.com/kenokabe/items/41189c45001321c9e283)
+####  [関数リアクティブプログラミング（FRP）で分断された2つの世界を繋ぐ【脱アルゴリズム宣言②】](http://qiita.com/kenokabe/items/a8477694a499ca869cde)
+#### [関数型（宣言型）プログラミングで無限をコーディングする「遅延評価」のわかりやすい解説【脱アルゴリズム宣言③】](http://qiita.com/kenokabe/items/821ce4020644372b648c)
 
-###[時空プログラミング 遅延評価とFRPで無限の時空を静的にコーディングする挑戦【時空プログラミング①】]()
+#### [LISPデータ構造の問題点と抜本的な解法としての新プログラミング言語の策定　純粋関数型言語「SpaceTime」 ドラフト](http://qiita.com/kenokabe/items/aa5705978d6a13753fe2)
 
-#時空プログラミング 遅延評価とFRPで無限の時空を静的にコーディングする挑戦【時空プログラミング①】
+#### [遅延評価(Lazy.js)とFRP(Bacon.js)とJavaScriptで時空なんでもマッピング！【時空プログラミング①】](http://qiita.com/kenokabe/items/b04e3d8d49b0ffc7a78b)
 
-さて、今回からは、「時空プログラミング」と冠して、大きな花火をぶち上げながら開始してみます。
+#### [タイマーを無限個作り、データとして取り回す【時空プログラミング②】](http://qiita.com/kenokabe/items/8c970d2b0dfa98187998)
 
-**時空をプログラミングする** っていうと「こりゃまた大風呂敷を広げたな」と思う人がきっと多いでしょう。
+#### [自然数と自然数+1 で偶数と奇数を作る【時空プログラミング③】]( http://qiita.com/kenokabe/items/f6172df8d8416429656a)
 
-しかしかしながら、実際のところ、プログラミングパラダイムの変遷とは 究極的に**時空をプログラミングする** という一大哲学的目標に向けて進化し続けていると言ってもけして過言ではありません。
+#### [数学と別離したプログラミング、時間を抽象化し数学を取り戻すプログラミング【時空プログラミング④】](http://qiita.com/kenokabe/items/b81c7aa8af86314551a0)
 
+# LISPデータ構造の問題点と抜本的な解法としての新プログラミング言語の策定　純粋関数型言語「SpaceTime」 ドラフト
 
-[コンピュータ・サイエンス](http://ja.wikipedia.org/wiki/%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%A6)
-によれば、
->計算機科学という名前にも関わらず、計算機科学の研究対象は物理的な電子計算機そのものではない。例えば著名な計算機科学者エドガー・ダイクストラは「天文学が望遠鏡に関する学問でないのと同様に、計算機科学はコンピュータに関する学問ではない」という言葉を残している。コンピュータの設計と開発は計算機科学の領域外の話である。例えばハードウェアは計算機工学の領域であるし、商用コンピュータシステムとその利用は情報技術とか情報システムと呼ばれる。ただし、コンピュータのハードウェアはその計算手法と密接な関係にあり、応用技術のなかにも計算機科学の対象となる部分がある。また、計算機科学と他の周辺学問分野との間では新たな学問がいくつも生まれている。計算機科学と関係の深い学問分野として、哲学、経済学、数学、物理学、言語学などを挙げることができる。
+ジョン・マッカーシーが開発したLISPは
 
->一部の人々は計算機科学は数学と最も関連が深いとみなしている[7]。初期の計算機科学はクルト・ゲーデルやアラン・チューリングなどの数学での業績に強い影響を受けていたし、数理論理学、圏論、領域理論、代数学といった領域は計算機科学と数学の間でアイデアをやり取りする領域となっている。
+(関数 引数 引数 引数)
 
->計算機科学とソフトウェア工学の関係は論争の的である。「ソフトウェア工学」という言葉が表すものが何か、計算機科学の範囲をどう定めるかは長年の議論の対象となっている。一部の人々はソフトウェア工学が計算機科学の一部であると信じている。他の人々は、計算機科学が計算全般を扱う学問であるのに対して、ソフトウェア工学は実用的な目的でコンピュータ処理を設計するものであり、異なる学問分野であると考えている。この見方の例としてデイビッド・パーナスがいる[10]。他の人々はソフトウェアは全く工学的に扱うことはできていないと考えている。
+という
 
-- 計算機科学の研究対象は物理的な電子計算機そのものではない
-
-- 計算機科学の理論的基盤はもちろん数学である
-
-- 「ソフトウェア工学」とは計算機科学を応用する工学（エンジニアリング）である
-
-だいたいこんな感じで、明確なコンセンサスには至っていない、というのが読み取れます。
-
-コンピュータサイエンス、ソフトウェア工学とは学際分野であり、明確な概念化が難しいのでしょう。
-
-本稿も、数学、科学、工学と学問領域をクロスオーバーします。
-
-**時空をプログラミングする**というフレーズは、端的に、数学、科学、工学をまたぐ学際的作業を試みているから、こういう表現になるでしょう。
-
-- 計算機科学の研究対象は物理的な電子計算機そのものではない
-
-- 計算機科学の理論的基盤はもちろん数学である
-
-数学の理論的基盤を物理的な計算機で展開する、この工学的手法がプログラミングです。
-
-この点を【脱アルゴリズム宣言】シリーズでの説明を振り返ると、
-
-####数学世界　--コンピューティング（計算）--> 　物理世界
-
-数学世界を物理世界へ展開する工学手法として、これまでのところ、物理マシンとしてのコンピュータによる物理的な処理プロセス、ステップByステップの命令型（手続き型）パラダイムの束縛からなかなか抜け出せないでいました。
-
-プログラミング言語は、機械語、アセンブリ、フォートラン、C言語、C++、Javaなどなど徐々に物理的な処理プロセスから「高級言語」へと（数学的に）抽象化されいったのですが、実務的なプログラミング作業では、これまで命令型（手続き型）パラダイムが主流となっていました。
-
-その大きな理由は、実務的プログラミングの世界では、ほとんどすべてのケースにおいて、非同期な入出力を扱うことになり、非同期な入出力（IO）は数学的に抽象化することが極めて困難だからです。
-
-つまり、
-
-####物理世界　--コーディング（モデル化）-->　数学世界
-
-の部分で完全に壁にぶち当たっており、
-
-####物理世界　--コーディング（モデル化）-->　数学世界　--コンピューティング（計算）--> 　物理世界
-
-という全体像のソフトウェア工学は大きな問題を抱えてきました。
-
-##数学のように見えて数学ではない破綻した数学モデル
-
-私が初めてプログラミングしたのは、小学校4年の頃で、父親が仕事に使うことを見越して家に買って帰ってきたHITACHIのBASICマスターというパソコンでした。
-
-今も昔も変わらないな、と思うのですが、子供はゲームに夢中です。どうもこのパソコンっていうのは自分でプログラムを打ち込むとゲームができるらしい、ということがわかりました。近所の本屋に行くと[マイコンBASICマガジン](http://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%A4%E3%82%B3%E3%83%B3BASIC%E3%83%9E%E3%82%AC%E3%82%B8%E3%83%B3)、知る人ぞ知る、通称「ベーマガ」が積み置かれていました。興奮して早速購入し、BASICの「プログラムリスト」（ソースコード）を打ち込みました。
-
-BASICである変数を1つ増やすのは、
+[S式](http://ja.wikipedia.org/wiki/S%E5%BC%8F)
+で表記され、プログラミング構文が存在しません。
 
 ```
-X = X + 1
+> (+ 1 2)
+3
 ```
 
-です、ゲーム画面上のキャラクターの座標をひとつ移動させるときに頻繁に使われる極めてありふれたコードです。
 
-この頃はまだ、小学4年だったので、算数の授業では「方程式」と言うのを習っておらず、何の疑問も抱かなかったのですが、中学に進学し、数学の授業で「方程式」の概念を習うと、
+データ=コード
+コード＝データ
+という（一見）美しい構造で、コードを変更するにはデータを変更すればよい、というコード自身を第一級（ファーストクラス）オブジェクトとして扱うことができます。
+
+最近、巷で若干注目を集めている、Javaでも実装されはじめた [リフレクション](http://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%95%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3_(%E6%83%85%E5%A0%B1%E5%B7%A5%E5%AD%A6))
+の最上級機能を言語構造として先天的に実装しているようなもので、自己定義する人工知能研究の分野（マッカーシーの専門分野）でよく使われてきたようです。
+　
+しかし、私がLISPを関数型言語の大御所として試すなかで問題だと思った事をざっくばらんに書きます。
+
+すでに【脱アルゴリズム宣言】シリーズで述べたように、関数型パラダイムは、まず最初にデータをまるごと用意し、そこに関数操作を加えていくという宣言をするという思考・指向でした。
+
+こういうデータをまるごと用意する、データのコレクション、リストという発想は、LISPのリストがオリジナルなのですが、遺憾なことに
+
+(関数 引数 引数 引数)
+
+っていうのが命令型パラダイムであるのに気づくでしょうか？
+
+(Do what what what)
+
+という構造になっている。
+
+関数型パラダイムであるならば、こう書くべきでしょう。
+
+(What Do Do Do)
+
+(データ 関数 関数 関数)
+
+そして、実際のところ
+
+(関数 引数 引数 引数)
+
+というデータ構造のために様々な目に見える弊害がLISP/Schemeにはあります。
+
+(関数 引数 引数 引数)とS式の最初が（データでなく）関数と決め打ちしているので、
+
+(データ　データ　データ)　たとえば
 
 ```
-X = X + 1
+(1 2 3)
 ```
 
-というのは数学の方程式としては成り立たない、ということがわかりました。
-
-「なるほど、どうやら、数学の方程式と、プログラミングとは違うようだ」
-
-と気づきました。
-
-数学の方程式の授業で代入というのを習いましたが、
-
-数学の方程式の代入が、
-
-- 式や関数に含まれる文字や変数を、数や他の文字や式で置き換えること
-
-であることに対して、
-
-プログラミングの代入は
-
-- 変数の値を設定（ないし変更）すること（assignment）
-
-という命令であり、
-
-同じ数学的な言葉「代入」の意味がぜんぜん違う！ということに愕然としました。
-
-愕然とした、というよりは、「なんかこれは後々ややこしい混乱を招くに違いない」「面倒を抱えた」と本能的な不快感を覚えました。
-
-「代入」にはふたつの異なる意味がある。
-
-http://ja.wikipedia.org/wiki/%E4%BB%A3%E5%85%A5
-
-結果として、これが数学という本質的に宣言型パラダイムを認識し、自分がそれと異なる命令型パラダイムにいると、ぼんやりとではありますが自覚した瞬間だったと言えるでしょう。
-
-しかし、その頃はコンピュータの動作原理などはおおよそ理解していたので、これは原理的に回避できない問題であり、コンピュータでプログラミングするには、宣言型である数学ではない、命令型パラダイムでステップByステップの変数への代入操作を繰り返していくしか無い、と思っていました。それがプログラミングなのだと。
-
-命令型プログラミングにおける代入は　**破壊的代入**と呼ばれたりします。
-
-##数学世界の破綻と数学世界への決別
-
-BASICがポピュラーだった頃、Cが登場してもてはやされていた頃のプログラマーは一部のコンピュータ科学の研究者をのぞいて、ほぼすべてこの踏み絵を踏まされていたのです。
-
-当時、命令型プログラミングとは、実務やゲームのプログラミングにおいて唯一無比の、他に選択肢のないデフォルトのパラダイムでした。
-
-しかし、ちょうどその頃、我々一般的なプログラマーが関知もしていないところで、研究者たちは、関数型プログラミング言語の研究を進めていました。
-
-関数型言語でもっとも古株はLISPで、LISPは、全てのプログラミング言語の中でも2番目に古い高級言語であるようです。
-
-LISPはその他Schemeに派生し、現在に広く使用されているようですが、実務で使用されているケースはあまり聞いたことはありません。理由はこの記事シリーズで書いているとおりです。
-
-ちなみに、私はLISPとSchemeを結構触ってみましたが、好きになれませんでした。
-触れば触るほど嫌いになってきました。
+というデータをそのまま書くとエラーになるんですね。だってまず `1`を関数として実行しようとするけど、関数ではないので。
 
 
+すべてがデータでありコードであり、コード自身を第一級（ファーストクラス）オブジェクトとして扱うことができる、という看板の割にあまりにもお粗末な結果です。
+
+これを回避するために、
+
+```
+>(list 1 2 3)
+(1 2 3)
+```
+
+という、見た目、カッコの位置がずれてデータ構造が変わってしまう方法
+だったり
+
+カッコの位置が一緒のデータ構造を維持しようと思えば、
+
+```
+> (quote (1 2 3))
+(1 2 3)
+```
+あるいは、quoteのショートカット記号を用いて
+
+```
+> '(1 2 3)
+(1 2 3)
+```
+
+と書く必要があります。このクオート記号すぐ打つの忘れるんですよね。非常に面倒くさい。美しくない。
+
+そしてよく考えてみると、S式の要件定義によれば、
+
+(関数 引数 引数 引数)
+
+なので、
+
+この
+
+```
+(quote (1 2 3))
+```
+の中身のかっこ(1 2 3)
+はS式じゃないだろ！ってことになります。
+
+そもそも(1 2 3)ってそのまま書いたらエラーになるから、quote付けたけど、定義どうりならばどっちにせよ無理で、
+
+最初の
+
+(list 1 2 3)
+
+って書くしか整合性を保つ方法がない！ってことになります。
+どうなってるのか？
+
+実は、
+
+(quote (1 2 3))
+
+の場合、引数である
+(1 2 3)
+っていうのは、S式として評価されません。
+
+S式でない評価しない特別なデータとして扱います。例外です。
+
+例外、美しくないですね。余剰なルールが追加されるわけで単純さが損なわれるからです。
+
+こんな調子では、
+
+「すべてがデータでありコードであり、コード自身を第一級（ファーストクラス）オブジェクトとして扱うことができる」
+
+と鵜呑みにして統一的に操作できると突き進んでも、いろいろ面倒なパッチを加えながらやるしかない未来が待ち受けているのは明々白々な状況です。
+
+- 命令型オリエンテッドなS式の表記
+
+- 破綻したデータ表現
+
+どうにか回避策は無いものか？と試行錯誤しましたが
+
+「ありませんでした」
+
+「そして根本的な理由がわかりました」
+
+S式のリストは、
+[Singly_linked_list](http://en.wikipedia.org/wiki/Singly_linked_list#Singly_linked_list)
+というリスト構造になっています。
+![](http://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+
+LISPのすべてを束縛するS式の表記は、この[Singly_linked_list](http://en.wikipedia.org/wiki/Singly_linked_list#Singly_linked_list)
+というリスト構造と等価であり、問題を解決するにはここからどうにかしないといけない。
+
+
+LISPのリストで
+((a b c)(d e f)(g h i))
+は、
+http://www.ki.nu/OHP/dot.emacs/list-drawing.html
+（ToDo　図作成）
+
+のようになっており、データの末尾を示すため終端にnilという空データをにつけます。
+
+これは美しくない。
+
+- データの末尾を示すため終端にnilという空データをにつける
+
+というのもルールの一つです。
+
+このルールどおりのものをPureList（純リスト）とし、LISPのS式はそれで構成されているのですが、このルールをぶちやぶって、任意のアトムを終端につけることだって可能です。この場合は
+PureListじゃないので各種操作は破綻する。
+
+セルを自由自在に組み合わせられる、柔軟な表現方法だとおもいきや、こういうルールがある。
+そしてルールどおりにするならば、新たなリストを既存のリストに結合する際には、終端のnilを一旦外し、そこに接続するという２ステップの置換になる。
+自由に接続じゃなくて、置換です。
+
+何かがおかしい、何もかもがしっくりこない、と思ったので、思案の上、自分が理想とする純粋関数型言語をJavaScript上で書きました。
+
+LISPを純粋関数型言語として全面的に書きなおす。
+
+LISPと逆方向のリスト構造を基盤とする。
+
+リストは`EmplyPair`という無限再帰構造をもつ`0`に相当するペアから始まる任意の構造である。
+
+終端に特別な操作がない、特別ルールがないのですべての構造がPureである。
+
+遅延評価であり、必要な構造のみ随時評価されていく。
+
+関数はファーストクラスオブジェクトであり、さらにLISPのように関数とデータの区別はしない
+
+すべての関数はデータである。
+
+すべてのデータは関数である。
+
+`(1 2 3)`というデータは`(1 2 3)`とクオート無しでクリーンにデータどおり表記され遅延評価される。。
+
+もはやLISPとは別物の新言語である。
+
+JSで書かれている、JSで動作する。
+
+#SpaceTime Programming Language
+The Spacetime Operating Language
+
+![](http://kenokabe.github.io/stability-badges/dist/experimental.svg)
+
+***SpaceTime***
+#### - is a Functional Reactive Programming (FRP) language
+#### - employs Lazy evaluation strategy
+#### - runs on JavaScript Engines (browsers & node.js)
+#### - is written in JavaScript
+
+##Hello world
+---
+
+###Qiitaではスクリプトが許可されていないので
+###[動作デモはプロジェクトサイト](http://spacetimeprogramminglanguage.github.io/)
+
+
+##Foundation
+---
+
+*Inspired by John McCarthy's LISP*
+
+*SpaceTime* is founded on an inverted data structure of
+[Singly linked list](http://en.wikipedia.org/wiki/Singly_linked_list#Singly_linked_list) and [S-expression](http://en.wikipedia.org/wiki/S-expression).
+
+###Pair
+
+![001](http://spacetimeprogramminglanguage.github.io/contents/img/001.svg)
+
+This is the fundamental unit of *SpaceTime*.
+`Pair` has a pair of hands to point a pair of any objects.
+
+---
+###Pair points a pair of objects
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/002.svg)
+
+Now, a `Pair` points objects: `a` and `b`.
+
+---
+###Pair notation
+![](http://spacetimeprogramminglanguage.github.io/contents/img/003.svg)
+
+When a `Pair` points objects: `a` and `b`, it's expressed as **{a b}** in `Pair notation`.
+
+---
+###Pair can point itself
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/004.svg)
+
+---
+###Empty Pair
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/005.svg)
+
+
+
+When a Pair points itself, since it's a form of [Self-reference](http://en.wikipedia.org/wiki/Self-reference), an  [Infinite recursion](http://en.wikipedia.org/wiki/Infinite_loop#Infinite_recursion) occurs.
+
+Accordingly, the `Pair notaion` is { { {...} {...} } { {...} {...} } }, so we simply express the entity as **{ }**, and let's call it `Empty Pair`.
+
+---
+###Push Pair
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/006.svg)
+
+A `Pair` can point another `Pair` so that we can joint `Pair`s.
+
+Now let a `pair` point another `Pair` and `5` by each hands.
+Let's call this special action `Push`.
+
+In this case, we `push` 5 to an `Empty Pair`.
+
+The `Pair notation` is **{ {} 5 }**.
+
+
+---
+###Push another Pair
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/007.svg)
+
+In the same manner, we can `push` another `Pair`.
+
+We `push` `2` to the previous sequence.
+
+The `Pair notation` is **{ { {} 5 } 2 }**.
+
+---
+###Push to any sequence
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/008.svg)
+
+---
+###Sequence
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/009.svg)
+
+Here, *SpaceTime* explicitly defines a term `Sequence` for this form.
+Please note this is the same term and meaning of [Sequence](http://en.wikipedia.org/wiki/Sequence) in Mathematics.
+
+At the same time, instead of `Pair notation` : { { { {} 5 } 2 } 7 }, it can be simply expressed as **( 5 2 7 )**.
+
+---
+###Push function
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/010.svg)
+
+A `Pair` can point `function`.
+
+Accordingly, we can `push` `function` to any `Sequence`.
+
+In this case, we `push` a `function` to **(5)**.
+
+---
+###A case of Push function
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/011.svg)
+
+When we push a `function` : `plus2` to **(5)**, the result is **(7)**.
+
+---
+###Function is Sequence
+The `function` : `plus2` is fundamentally some `Sequence`.
+
+`plus2` consists of a `Sequence` : **( plus (2) )**.
+
+**(2)** is an `attribute Sequence` of the `function`.
+
+**( 5 (plus (2)) )** is equivalent to **(7)**.
+
+---
+### Everything is a function and Sequence
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/012.svg)
+
+
+Everything is `function` in *SpaceTime*.
+
+In this case, `3` is a `function` that maps a source : **( 5 )** to a target : **( 5 3 )**.
+
+Consequently, since `function` is `Sequence` in *SpaceTime*, everything is `Sequence` in *SpaceTime*.
+
+Therefore, `3` is a `function` and at the same time, is a `Sequence`.
+
+However, `3` is `3`. There is no other way to express than just `3` in *SpaceTime*.
+
+
+
+---
+###Every Sequence is a result of function to `Empty Pair`
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/013.svg)
+
+---
+###Function composition
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/014.svg)
+
+[Function composition](http://en.wikipedia.org/wiki/Function_composition) is naturally expressed in a form :
+**( *source function fucnction )** in *SpaceTime*.
+
+Please note the `source` = **( 1 )** as a `Sequence`, not 1.
+
+---
+###1 +2 +3 = 6
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/015.svg)
+
+*SpaceTime* has a short-cut notation : **+** corresponding to `plus` function.
+
+---
+###1 +(2 +3) = 6
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/016.svg)
+
+( 1 (+ ( 2 (+ ( 3 ) ) ) ) )  =  ( 6 )
+
+---
+###Indefinite sequence
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/017.svg)
+
+*SpaceTime* employes an [evaluation strategy](http://en.wikipedia.org/wiki/Evaluation_strategy) : [lazy evaluation, or call-by-need](http://en.wikipedia.org/wiki/Lazy_evaluation).
+
+Accordingly, *SpaceTime* can deal with Indefinite sequence such as [Natural number](http://en.wikipedia.org/wiki/Natural_number).
+
+---
+###I/O (Input and Output)
+
+![](http://spacetimeprogramminglanguage.github.io/contents/img/018.svg)
+
+[I/O](http://en.wikipedia.org/wiki/Input/output) does not affect the evaluation context of *SpaceTime* directly, so that it can preserve [Functional programming](http://en.wikipedia.org/wiki/Functional_programming) paradigm.
+
+*SpaceTime* employes [FRP](http://en.wikipedia.org/wiki/Functional_reactive_programming) or `SpaceTime Programming paradigm`.
+
+---
+
+
+##Basic
+---
+###Hello world
+`Code`
+```
+(
+  "hello World"
+  (map (CONSOLE))
+)
+```
+`Evaluation`
+```
+("hello World")
+```
+`Console`
+```
+hello World
+```
+---
+###Hello world twice
+
+`Code`
+```
+(
+  "hello World"
+  (map (CONSOLE))
+  (map (CONSOLE))
+)
+```
+`Evaluation`
+```
+("hello World")
+```
+`Console`
+```
+hello World
+hello World
+```
+
+---
+###Boolean
+
+`Code`
+```
+(3 (== (3)) )
+```
+`Evaluation`
+```
+(true)
+```
+
+
+`Code`
+```
+(3 (== (5)) )
+```
+`Evaluation`
+```
+(false)
+```
+
+
+`Code`
+```
+(2 (> (1)) )
+```
+`Evaluation`
+```
+(true)
+```
+
+
+`Code`
+```
+(2 (< (1)) )
+```
+`Evaluation`
+```
+(false)
+```
+
+
+---
+###Conditional
+
+`Code`
+```
+(
+　　3 (==(3))　
+   (
+     if (
+           ("match")
+           ("mismatch")
+        )
+   )
+)
+```
+`Evaluation`
+```
+("match")
+```
+
+
+`Code`
+```
+(
+　　3 (==(5))　
+   (
+     if (
+           ("match")
+           ("mismatch")
+        )
+   )
+)
+```
+`Evaluation`
+```
+("mismatch")
+```
+
+
+`Code`
+```
+(
+　　3 (==(5))　
+   (
+     if (
+           ("case1")
+           (
+           　　3 (==(3))　
+              (
+                if (
+                      ("case2")
+                      (
+                      　　3 (==(3))　
+                         (
+                           if (
+                                 ("case3")
+                                 ("mismatch")
+                              )
+                         )
+                      )
+                   )
+              )
+           )
+        )
+   )
+)
+
+```
+`Evaluation`
+```
+("case2")
+```
+
+
+`Code`
+```
+(
+　　3 (==(5))　
+   (
+     if (
+           ("case1")
+           (
+           　　3 (==(1))　
+              (
+                if (
+                      ("case2")
+                      (
+                      　　3 (==(3))　
+                         (
+                           if (
+                                 ("case3")
+                                 ("mismatch")
+                              )
+                         )
+                      )
+                   )
+              )
+           )
+        )
+   )
+)
+
+```
+
+`Evaluation`
+
+```
+("case3")
+```
 
 
 
 
 
 
+---
 
 
 
-
-
-、このデータ構造を採用していることにより、
-
-####数学世界　--コンピューティング（計算）--> 　物理世界
 
 
 #### KenOKABE tech blog
