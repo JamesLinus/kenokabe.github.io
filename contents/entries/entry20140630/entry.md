@@ -395,7 +395,7 @@ Haskellが採用したアプローチは、[モナド](http://ja.wikipedia.org/w
 
 ```
 var a = 5;
-var b = 2 * a;
+var b = a * 2;
 
 console.log(a); //5
 console.log(b); //10
@@ -543,7 +543,7 @@ var a = __.sequentially(5000, [5, 7]);
 ```
 var b = a.map(function(x)
 {
-  return 2 * x;
+  return x * 2;
 });
 ```
 
