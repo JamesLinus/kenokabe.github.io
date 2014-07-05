@@ -17,3 +17,7 @@
  #### [自然数と自然数+1 で偶数と奇数を作る【時空プログラミング③】]( http://qiita.com/kenokabe/items/f6172df8d8416429656a)
 
  #### [数学と別離したプログラミング、時間を抽象化し数学を取り戻すプログラミング【時空プログラミング④】](http://qiita.com/kenokabe/items/b81c7aa8af86314551a0)
+
+ #MacHackシリーズ
+ #### [生産性が飛躍的に向上するかもしれないMacキーマップ問題のイライラ解消ハック](http://qiita.com/kenokabe/items/59487f5dfbf14878a8ec)
+ 　
